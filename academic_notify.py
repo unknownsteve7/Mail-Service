@@ -18,8 +18,8 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # Retrieve from environment variables, or use provided defaults for testing
-SENDER_EMAIL = os.getenv("SMTP_USER", "sjsvardhan@gmail.com")
-SENDER_PASSWORD = os.getenv("SMTP_PASS", "kpke ekfk fqhz cqge") # Ensure this is an App Password if using Gmail
+SENDER_EMAIL = os.getenv("SMTP_USER")
+SENDER_PASSWORD = os.getenv("SMTP_PASS") 
 
 if not SENDER_EMAIL or not SENDER_PASSWORD:
     raise RuntimeError("SMTP credentials not found. Please set SMTP_USER and SMTP_PASS environment variables.")
